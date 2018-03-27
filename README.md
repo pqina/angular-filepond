@@ -19,8 +19,9 @@ Usage:
 ```js
 import { Component, ViewChild } from '@angular/core';
 
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
+// Register file type validation plugin
 import { registerPlugin } from './filepond/filepond';
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
 registerPlugin(FilePondPluginFileValidateType);
 
 @Component({
