@@ -73,7 +73,7 @@ export const registerPlugin = (...args) => {
       </div>
     `,
     encapsulation: ViewEncapsulation.None,
-    styleUrls: [`./filepond.scss`],
+    styleUrls: [`./index.css`],
     inputs,
     outputs
 })
