@@ -1,6 +1,6 @@
 {
     "name": "angular-filepond",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A handy FilePond adapter component for Angular",
     "homepage": "https://pqina.nl/filepond",
     "main": "index.js",
