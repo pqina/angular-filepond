@@ -20,10 +20,10 @@ import {
 } from 'filepond';
 
 // Do this once
-const isSupported = supported();
+const isSupported: boolean = supported();
 
 // Methods not made available to the component
-const filteredComponentMethods = [
+const filteredComponentMethods: Array<string> = [
     'setOptions',
     'on',
     'off',
@@ -38,10 +38,10 @@ const filteredComponentMethods = [
 ];
 
 // All the properties that can be bound
-const inputs = [];
+const inputs: Array<any> = [];
 
 // All the events that need to be mapped to emitters
-const outputs = [];
+const outputs: Array<any> = [];
 
 const update = () => {
     inputs.length = 0;
@@ -61,7 +61,7 @@ const update = () => {
 // get initial inputs and outputs
 update();
 
-export const registerPlugin = (...args) => {
+export const registerPlugin = (...args: Array<any>) => {
 
     // register plugin
     register(...args);
@@ -78,7 +78,6 @@ export const registerPlugin = (...args) => {
       </div>
     `,
     encapsulation: ViewEncapsulation.None,
-    styleUrls: [`./index.css`],
     inputs,
     outputs
 })
@@ -90,7 +89,7 @@ export class FilePond {
     private _element: any;
     private _options: any;
 
-    constructor(private _ngZone: NgZone, _root: ElementRef) {
+    constructor(_root: ElementRef, private _ngZone: NgZone) {
         this._root = _root;
 
         // init with empty options object
@@ -107,9 +106,9 @@ export class FilePond {
 
         this._element = this._root.nativeElement.querySelector('input');
 
-        // Map FilePond callback methods to Vue $emitters
+        // Map FilePond callback methods to Angular $emitters
         const emitters = outputs.reduce((obj, output) => {
-            obj[output] = (...args) => {
+            obj[output] = (...args: Array<any>) => {
                 this[output].emit(output, ...args);
             };
             return obj;

@@ -8,25 +8,50 @@ Angular FilePond is a handy adapter component for [FilePond](https://github.com/
 
 <img src="https://github.com/pqina/filepond-github-assets/blob/master/filepond-animation-01.gif?raw=true" width="370" alt=""/>
 
-Installation:
+## Installation
+
+Install FilePond component from npm.
 
 ```bash
 npm install angular-filepond --save
 ```
 
-Usage:
+Add `FilePond` to an NgModule and if needed register any plugins.
+
+```js
+import { FilePond, registerPlugin } from 'angular-filepond';
+
+// Registering plugins
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm';
+registerPlugin(FilePondPluginFileValidateType);
+
+// Adding FilePond to imports
+@NgModule({
+  imports: [
+    FilePond
+  ]
+})
+
+export class AppModule { }
+```
+
+Add the FilePond stylesheet to your `angular-cli.json` build script.
+
+```json
+"styles": [
+  "styles.css",
+  "../node_modules/filepond/dist/filepond.min.css"
+]
+```
+
+Now FilePond can be used in your templates.
 
 ```js
 import { Component, ViewChild } from '@angular/core';
 
-// Register file type validation plugin
-import { registerPlugin } from './filepond/filepond';
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
-registerPlugin(FilePondPluginFileValidateType);
-
 @Component({
   selector: 'app-root',
-  template:  `
+  template: `
     <div class="root">
         <FilePond #myPond 
             name="my-name" 

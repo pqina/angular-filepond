@@ -1,0 +1,64 @@
+/*
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "../dist",
+        "module": "es2015",
+        "target": "es5",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "inlineSources": true,
+        "declaration": true,
+        "stripInternal": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "lib": [
+            "es2017",
+            "dom"
+        ]
+    },
+    "files": [
+        "../typings/filepond.d.ts",
+        "index.ts"
+    ],
+    "angularCompilerOptions": {
+        "skipMetadataEmit": false,
+        "skipTemplateCodegen": true,
+        "annotateForClosureCompiler": true,
+        "flatModuleOutFile": "angular-filepond.js",
+        "flatModuleId": "angular-filepond"
+    }
+}
+*/
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "inlineSources": true,
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "outDir": "../dist",
+        "rootDir": ".",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": false,
+        "target": "es5"
+    },
+    "files": [
+        "angular-filepond.module.ts"
+    ],
+    "angularCompilerOptions": {
+        "annotateForClosureCompiler": true,
+        "skipTemplateCodegen": true,
+        "strictMetadataEmit": true
+    }
+}
