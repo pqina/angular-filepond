@@ -20,7 +20,7 @@ Usage:
 import { Component, ViewChild } from '@angular/core';
 
 // Register file type validation plugin
-import { registerPlugin } from './filepond/filepond';
+import { registerPlugin } from 'angular-filepond';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
 registerPlugin(FilePondPluginFileValidateType);
 
