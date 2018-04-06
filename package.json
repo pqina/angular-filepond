@@ -1,12 +1,14 @@
 {
     "name": "angular-filepond",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A handy FilePond adapter component for Angular",
     "homepage": "https://pqina.nl/filepond",
     "license": "MIT",
     "main": "dist/angular-filepond.module.js",
     "keywords": [
         "angular",
+        "angularjs",
+        "ngx",
         "filepond",
         "file",
         "upload",
@@ -37,12 +39,12 @@
         "zone.js": "^0.8.25"
     },
     "devDependencies": {
-        "@angular/core": "^5.2.9",
         "@angular/compiler": "^5.2.9",
         "@angular/compiler-cli": "^5.2.9",
-        "typescript": "^2.8.1",
+        "@angular/core": "^5.2.9",
         "rollup": "^0.57.1",
         "rxjs": "^5.5.8",
+        "typescript": "^2.8.1",
         "zone.js": "^0.8.25"
     }
 }
