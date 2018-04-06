@@ -1,6 +1,6 @@
 {
     "name": "angular-filepond",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A handy FilePond adapter component for Angular",
     "homepage": "https://pqina.nl/filepond",
     "license": "MIT",
@@ -22,11 +22,19 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/pqina/react-filepond.git"
+        "url": "https://github.com/pqina/angular-filepond.git"
     },
     "scripts": {
         "build": "ngc -p src/tsconfig.json",
         "prepare": "npm run build"
+    },
+    "dependencies": {
+        "filepond": "^1.2.7"
+    },
+    "peerDependencies": {
+        "@angular/core": "^5.2.9",
+        "typescript": "^2.8.1",
+        "zone.js": "^0.8.25"
     },
     "devDependencies": {
         "@angular/core": "^5.2.9",
@@ -36,13 +44,5 @@
         "rollup": "^0.57.1",
         "rxjs": "^5.5.8",
         "zone.js": "^0.8.25"
-    },
-    "peerDependencies": {
-        "@angular/core": "^5.2.9",
-        "typescript": "^2.8.1",
-        "zone.js": "^0.8.25"
-    },
-    "dependencies": {
-        "filepond": "^1.2.7"
     }
 }
