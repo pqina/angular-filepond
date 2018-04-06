@@ -2,11 +2,6 @@
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/*
- * Angular FilePond 1.0.2
- * Licensed under MIT, https://opensource.org/licenses/MIT
- * Please visit https://pqina.nl/filepond for details.
- */
 import { Component, EventEmitter, ViewEncapsulation, ElementRef, NgZone } from '@angular/core';
 import { OptionTypes, create, supported, registerPlugin as register } from 'filepond';
 // Do this once

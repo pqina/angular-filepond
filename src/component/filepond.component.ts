@@ -1,8 +1,3 @@
-/*
- * Angular FilePond 1.0.2
- * Licensed under MIT, https://opensource.org/licenses/MIT
- * Please visit https://pqina.nl/filepond for details.
- */
 import {
     Component,
     EventEmitter,
