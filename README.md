@@ -59,6 +59,7 @@ import { Component, ViewChild } from '@angular/core';
             labelIdle="Drop files here..."
             allowMultiple="true"
             acceptedFileTypes="image/jpeg, image/png"
+            server="/api"
             [files]="myFiles" 
             (oninit)="handleFilePondInit()">
         </FilePond>
