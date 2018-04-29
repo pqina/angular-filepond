@@ -4,15 +4,14 @@ import {
   ViewEncapsulation,
   ElementRef,
   SimpleChanges,
-  NgZone, OnChanges, OnDestroy, AfterViewInit, Input
+  NgZone,
+  OnChanges,
+  OnDestroy,
+  AfterViewInit,
+  Input
 } from '@angular/core';
 
-import {
-  OptionTypes,
-  create,
-  supported,
-  registerPlugin as register
-} from 'filepond';
+import { OptionTypes, create, supported, registerPlugin as register } from 'filepond';
 
 // Do this once
 const isSupported: boolean = supported();
@@ -57,7 +56,6 @@ const update = () => {
 update();
 
 export const registerPlugin = (...args: Array<any>) => {
-
   // register plugin
   register(...args);
 
@@ -77,9 +75,7 @@ export const registerPlugin = (...args: Array<any>) => {
   inputs,
   outputs
 })
-
 export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
-
   @Input() id: string;
   @Input() name: string;
   @Input() className: string;
@@ -104,11 +100,9 @@ export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
     outputs.forEach(output => {
       this[output] = new EventEmitter();
     });
-
   }
 
   ngAfterViewInit() {
-
     this._element = this._root.nativeElement.querySelector('input');
 
     // Map FilePond callback methods to Angular $emitters
@@ -134,7 +128,9 @@ export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
 
   ngOnChanges(changes: SimpleChanges) {
     for (const key in this) {
-      if (!inputs.includes(key)) { continue; }
+      if (!inputs.includes(key)) {
+        continue;
+      }
       this._options[key] = this[key];
     }
     if (!this._pond) {
@@ -149,5 +145,4 @@ export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
     }
     this._pond.destroy();
   }
-
 }

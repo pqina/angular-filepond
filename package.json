@@ -58,7 +58,7 @@
     "doc:buildandserve": "compodoc -p tsconfig.json -d docs -s",
     "// - UTILS": "Utility Scripts",
     "lint": "ng lint",
-    "format": "prettier --write *.ts"
+    "format": "prettier --write  'packages/ngx-filepond/{src,__{tests,mocks}__}/**/*.ts' 'integration/{app,__{tests,mocks}__}/**/*.ts'"
   },
   "private": true,
   "devDependencies": {

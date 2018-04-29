@@ -11,14 +11,9 @@ import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
 registerPlugin(FilePondPluginFileValidateType, FilepondPluginImagePreview);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FilePondModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, FilePondModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

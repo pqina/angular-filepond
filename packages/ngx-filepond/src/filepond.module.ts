@@ -6,5 +6,4 @@ import { FilePondComponent } from './filepond.component';
   declarations: [FilePondComponent],
   exports: [FilePondComponent]
 })
-
-export class FilePondModule { }
+export class FilePondModule {}

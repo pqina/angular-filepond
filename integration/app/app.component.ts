@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +12,8 @@ export class AppComponent {
   @ViewChild('myPond') myPond: any;
 
   handleFilePondInit = () => {
-
     console.log('FilePond has initialised');
 
     // FilePond instance methods are available on `this.myPond`
-
-  }
+  };
 }
