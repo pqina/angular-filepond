@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../builds/ngx-filepond",
+  "lib": {
+    "flatModuleFile": "pqina-ngx-filepond",
+    "entryFile": "index.ts",
+    "umdModuleIds": {}
+  }
+}

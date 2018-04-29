@@ -18,17 +18,19 @@ npm install angular-filepond --save
 
 Add `FilePond` to an NgModule and if needed register any plugins. Please note that plugins need to be [installed from npm](https://pqina.nl/filepond/docs/patterns/plugins/introduction/#installing-plugins) separately.
 
-```js
-import { FilePond, registerPlugin } from 'angular-filepond';
+```ts
+import { FilePond, registerPlugin } from 'ngx-filepond';
 
 // Registering plugins
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm';
-registerPlugin(FilePondPluginFileValidateType);
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+
+registerPlugin(FilePondPluginFileValidateType, FilepondPluginImagePreview);
 
 // Adding FilePond to imports
 @NgModule({
   imports: [
-    FilePond
+    FilePondModule
   ]
 })
 
@@ -40,13 +42,14 @@ Add the FilePond stylesheet to your `angular-cli.json` build script.
 ```json
 "styles": [
   "styles.css",
-  "../node_modules/filepond/dist/filepond.min.css"
+  "./node_modules/filepond/dist/filepond.min.css",
+  "./filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
 ]
 ```
 
 Now FilePond can be used in your templates.
 
-```js
+```ts
 import { Component, ViewChild } from '@angular/core';
 
 @Component({

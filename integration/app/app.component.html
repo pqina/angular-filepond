@@ -1,0 +1,12 @@
+<div class="root">
+  <FilePond #myPond
+            name="my-name"
+            className="my-class"
+            labelIdle="Drop files here..."
+            allowMultiple="true"
+            acceptedFileTypes="image/jpeg, image/png"
+            server="/api"
+            [files]="myFiles"
+            (oninit)="handleFilePondInit()">
+  </FilePond>
+</div>

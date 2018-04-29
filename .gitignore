@@ -1,4 +1,57 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/src/environments/version.ts
+/builds
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.bak
+/builds
+/dist-integration
+/dist
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
 npm-debug.log
-node_modules/
+testem.log
+/typings
+.test-results.json
+/dist-lib
+/dist-integration
+
+# testing
+/junit/
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
 .DS_Store
-package-lock.json
+Thumbs.db
+/storybook-static
+/yarn-error.log
+.ng_pkg_build/

@@ -1,32 +1,18 @@
 {
-    "compilerOptions": {
-        "module": "es2015",
-        "target": "es5",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "inlineSources": true,
-        "declaration": true,
-        "stripInternal": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "noImplicitAny": false,
-        "suppressImplicitAnyIndexErrors": true,
-        "outDir": "build",
-        "rootDir": "src",
-        "lib": [
-            "es2017",
-            "dom"
-        ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@pqina/*": ["packages/*"]
     },
-    "files": [
-        "typings/filepond.d.ts",
-        "src/index.ts"
-    ],
-    "angularCompilerOptions": {
-        "skipMetadataEmit": false,
-        "skipTemplateCodegen": true,
-        "annotateForClosureCompiler": true,
-        "flatModuleOutFile": "angular-filepond.js",
-        "flatModuleId": "angular-filepond"
-    }
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "typeRoots": ["node_modules/@types"]
+  }
 }
