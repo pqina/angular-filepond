@@ -1,10 +1,22 @@
 <div class="root">
+  <!--<FilePond #myPond-->
+            <!--name="my-name"-->
+            <!--className="my-class"-->
+            <!--labelIdle="Drop files here..."-->
+            <!--allowMultiple="true"-->
+            <!--maxFiles="3"-->
+            <!--maxFileSize="1MB"-->
+            <!--acceptedFileTypes="image/*, .pdf, .vsd, .pptx, .ppt, .txt"-->
+            <!--server="/api"-->
+            <!--[files]="myFiles"-->
+            <!--(oninit)="handleFilePondInit()">-->
+  <!--</FilePond>-->
   <FilePond #myPond
-            name="my-name"
-            className="my-class"
-            labelIdle="Drop files here..."
+            required="true"
             allowMultiple="true"
-            acceptedFileTypes="image/jpeg, image/png"
+            maxFiles="3"
+            maxFileSize="1MB"
+            [acceptedFileTypes]="['image/*', 'application/pdf', 'application/*', 'text/plain', 'text/csv']"
             server="/api"
             [files]="myFiles"
             (oninit)="handleFilePondInit()">

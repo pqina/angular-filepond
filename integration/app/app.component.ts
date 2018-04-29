@@ -11,9 +11,9 @@ export class AppComponent {
   // Allows us to get a reference to the FilePond instance
   @ViewChild('myPond') myPond: any;
 
-  handleFilePondInit = () => {
+  handleFilePondInit() {
     console.log('FilePond has initialised');
 
     // FilePond instance methods are available on `this.myPond`
-  };
+  }
 }

@@ -65,12 +65,8 @@ export const registerPlugin = (...args: Array<any>) => {
 
 @Component({
   selector: 'FilePond',
-  template: `
-      <div class="filepond--wrapper">
-        <input type="file" id={{id}} name={{name}} class={{className}}
-        required={{required}} multiple={{allowMultiple}} accept={{acceptedFileTypes}}/>
-      </div>
-    `,
+  templateUrl: './filepond.component.html',
+  styleUrls: ['./filepond.component.scss'],
   encapsulation: ViewEncapsulation.None,
   inputs,
   outputs
@@ -81,7 +77,7 @@ export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
   @Input() className: string;
   @Input() required: boolean;
   @Input() allowMultiple: boolean;
-  @Input() acceptedFileTypes: string;
+  @Input() acceptedFileTypes: Array<string>;
   @Input() files;
 
   private _pond: any;

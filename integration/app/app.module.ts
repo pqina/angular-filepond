@@ -5,10 +5,11 @@ import { FilePondModule, registerPlugin } from '@pqina/ngx-filepond';
 import { AppComponent } from './app.component';
 
 // Registering plugins
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
-import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+import * as FilepondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+import * as FilepondPluginImagePreview from 'filepond-plugin-image-preview';
 
-registerPlugin(FilePondPluginFileValidateType, FilepondPluginImagePreview);
+registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, FilepondPluginImagePreview);
 
 @NgModule({
   declarations: [AppComponent],
