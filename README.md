@@ -8,6 +8,10 @@ Angular FilePond is a handy adapter component for [FilePond](https://github.com/
 
 <img src="https://github.com/pqina/filepond-github-assets/blob/master/filepond-animation-01.gif?raw=true" width="370" alt=""/>
 
+## Docs
+
+[documentation](https://xmlking.github.io/ngx-filepond/)
+ 
 ## Installation
 
 Install FilePond component from npm.
