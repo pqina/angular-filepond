@@ -26,10 +26,11 @@ Add `FilePond` to an NgModule and if needed register any plugins. Please note th
 import { FilePond, registerPlugin } from 'ngx-filepond';
 
 // Registering plugins
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
-import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+import * as FilepondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+import * as FilepondPluginImagePreview from 'filepond-plugin-image-preview';
 
-registerPlugin(FilePondPluginFileValidateType, FilepondPluginImagePreview);
+registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, FilepondPluginImagePreview);
 
 // Adding FilePond to imports
 @NgModule({
@@ -60,16 +61,17 @@ import { Component, ViewChild } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="root">
-        <FilePond #myPond 
-            name="my-name" 
-            className="my-class" 
-            labelIdle="Drop files here..."
-            allowMultiple="true"
-            acceptedFileTypes="image/jpeg, image/png"
-            server="/api"
-            [files]="myFiles" 
-            (oninit)="handleFilePondInit()">
-        </FilePond>
+      <FilePond #myPond
+                name="myFilePond"
+                required="true"
+                allowMultiple="true"
+                maxFiles="3"
+                maxFileSize="1MB"
+                [acceptedFileTypes]="['image/*', 'application/pdf', 'application/*', 'text/plain', 'text/csv', '.vsd']"
+                server="/api"
+                [files]="myFiles"
+                (oninit)="handleFilePondInit()">
+      </FilePond>
     </div>
   `
 })
