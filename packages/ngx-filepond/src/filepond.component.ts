@@ -72,13 +72,48 @@ export const registerPlugin = (...args: Array<any>) => {
   outputs
 })
 export class FilePondComponent implements OnChanges, OnDestroy, AfterViewInit {
-  @Input() id: string;
-  @Input() name: string;
-  @Input() className: string;
-  @Input() required: boolean;
-  @Input() allowMultiple: boolean;
-  @Input() acceptedFileTypes: Array<string>;
-  @Input() files;
+  @Input() id?: string;
+  @Input() name?: string;
+  @Input() className?: string;
+  @Input() required?: boolean;
+  @Input() captureMethod?: any;
+  @Input() allowDrop?: boolean;
+  @Input() allowBrowse?: boolean;
+  @Input() allowPaste?: boolean;
+  @Input() allowMultiple?: boolean;
+  @Input() allowReplace?: boolean;
+  @Input() allowRevert?: boolean;
+  @Input() maxFiles?: number;
+
+  @Input() dropOnPage?: boolean;
+  @Input() dropOnElement?: boolean;
+  @Input() dropValidation?: boolean;
+  @Input() ignoredFiles?: Array<string>;
+
+  @Input() server?: any;
+  @Input() instantUpload?: boolean;
+  @Input() files?: Array<any>;
+
+  @Input() labelIdle?: string;
+
+  @Input() allowFileEncode?: boolean;
+  @Input() allowFileSizeValidation?: boolean;
+  @Input() maxFileSize?: any;
+  @Input() maxTotalFileSize?: any;
+
+  @Input() allowFileTypeValidation?: boolean;
+  @Input() acceptedFileTypes?: Array<string>;
+
+  @Input() allowImagePreview?: boolean;
+  @Input() imagePreviewMinHeight?: number;
+  @Input() imagePreviewMaxHeight?: number;
+  @Input() imagePreviewHeight?: any;
+  @Input() imagePreviewMaxFileSize?: any;
+
+  @Input() allowImageResize?: boolean;
+  @Input() imageResizeTargetWidth?: any;
+  @Input() imageResizeTargetHeight?: any;
+  @Input() imageResizeMode?: string;
 
   private _pond: any;
   private _root: any;
