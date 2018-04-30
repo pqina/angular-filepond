@@ -80,10 +80,11 @@ export class AppComponent {
       };
     },
 
-    load: (uniqueFileId, load, error, progress, abort, headers) => {
+    fetch: (url, load, error, progress, abort, headers) => {
 
     },
-    fetch: (url, load, error, progress, abort, headers) => {
+
+    restore: (uniqueFileId, load, error, progress, abort, headers) => {
 
     }
 
