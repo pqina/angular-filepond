@@ -9,7 +9,7 @@ async function main() {
   for (const pack of packages) {
     await execute(`
       cd ${pack.buildPath} &&
-      yarn publish --access public --non-interactive --no-git-tag-version --new-version ${json.version} --tag latest
+      npm publish --access public --non-interactive --no-git-tag-version --new-version ${json.version} --tag latest
     `);
   }
 }
