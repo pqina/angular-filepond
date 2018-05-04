@@ -23,7 +23,7 @@ npm install angular-filepond --save
 Add `FilePond` to an NgModule and if needed register any plugins. Please note that plugins need to be [installed from npm](https://pqina.nl/filepond/docs/patterns/plugins/introduction/#installing-plugins) separately.
 
 ```ts
-import { FilePond, registerPlugin } from 'ngx-filepond';
+import { FilePond, registerPlugin } from '@pqina/ngx-filepond';
 
 // Registering plugins
 import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
