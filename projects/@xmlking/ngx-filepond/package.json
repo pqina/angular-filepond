@@ -1,12 +1,12 @@
 {
   "name": "@pqina/ngx-filepond",
   "description": "A handy FilePond adapter component for Angular",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "bundledDependencies": [
     "filepond"
   ],
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": ">=5.0.0 <7.0.0",
+    "@angular/core": ">=5.0.0 <7.0.0"
   }
 }
