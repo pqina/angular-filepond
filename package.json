@@ -1,50 +1,90 @@
 {
-    "name": "angular-filepond",
-    "version": "1.0.5",
-    "description": "A handy FilePond adapter component for Angular",
-    "homepage": "https://pqina.nl/filepond",
-    "license": "MIT",
-    "main": "dist/angular-filepond.module.js",
-    "keywords": [
-        "angular",
-        "angularjs",
-        "ngx",
-        "filepond",
-        "file",
-        "upload",
-        "drag",
-        "drop",
-        "browse",
-        "image",
-        "preview"
-    ],
-    "author": {
-        "name": "PQINA",
-        "url": "https://pqina.nl"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pqina/angular-filepond.git"
-    },
-    "scripts": {
-        "build": "ngc -p src/tsconfig.json",
-        "prepare": "npm run build"
-    },
-    "dependencies": {
-        "filepond": "^1.2.7"
-    },
-    "peerDependencies": {
-        "@angular/core": "^5.2.9",
-        "typescript": "^2.8.1",
-        "zone.js": "^0.8.25"
-    },
-    "devDependencies": {
-        "@angular/compiler": "^5.2.9",
-        "@angular/compiler-cli": "^5.2.9",
-        "@angular/core": "^5.2.9",
-        "rollup": "^0.57.1",
-        "rxjs": "^5.5.8",
-        "typescript": "^2.8.1",
-        "zone.js": "^0.8.25"
-    }
+  "name": "ngx-filepond",
+  "version": "1.0.13",
+  "description": "A handy FilePond adapter component for Angular",
+  "homepage": "https://pqina.nl/filepond",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "ngx",
+    "filepond",
+    "file",
+    "upload",
+    "drag",
+    "drop",
+    "browse",
+    "image",
+    "preview"
+  ],
+  "author": {
+    "name": "PQINA",
+    "url": "https://pqina.nl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pqina/ngx-filepond.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pqina/ngx-filepond/issues"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "release": "standard-version"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^6.0.2",
+    "@angular/common": "^6.0.2",
+    "@angular/compiler": "^6.0.2",
+    "@angular/core": "^6.0.2",
+    "@angular/forms": "^6.0.2",
+    "@angular/http": "^6.0.2",
+    "@angular/platform-browser": "^6.0.2",
+    "@angular/platform-browser-dynamic": "^6.0.2",
+    "@angular/router": "^6.0.2",
+    "core-js": "^2.5.6",
+    "filepond": "^1.5.2",
+    "filepond-plugin-file-encode": "^1.0.4",
+    "filepond-plugin-file-validate-size": "^1.0.3",
+    "filepond-plugin-file-validate-type": "^1.1.0",
+    "filepond-plugin-image-crop": "^1.0.1",
+    "filepond-plugin-image-exif-orientation": "^1.0.1",
+    "filepond-plugin-image-preview": "^1.0.9",
+    "filepond-plugin-image-resize": "^1.0.1",
+    "filepond-plugin-image-transform": "^1.0.1",
+    "rxjs": "^6.0.1",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.6.3",
+    "@angular-devkit/build-ng-packagr": "^0.6.3",
+    "@angular/cli": "^6.0.3",
+    "@angular/compiler-cli": "^6.0.2",
+    "@angular/language-service": "^6.0.2",
+    "@types/jasmine": "^2.8.6",
+    "@types/jasminewd2": "^2.0.3",
+    "@types/node": "^10.1.2",
+    "codelyzer": "^4.3.0",
+    "jasmine-core": "^3.1.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.4.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^3.0.0-rc.5",
+    "protractor": "^5.3.2",
+    "standard-version": "^4.3.0",
+    "ts-node": "^6.0.3",
+    "tsickle": "^0.28.0",
+    "tslib": "^1.9.1",
+    "tslint": "^5.10.0",
+    "typescript": "~2.7.2"
+  }
 }
